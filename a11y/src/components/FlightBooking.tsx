@@ -38,7 +38,9 @@ const FlightBooking = () => {
         </label>
         <div className="counter">
           <button
-            className="button-text"
+            className={`button-text ${
+              adultCount === MIN_PASSENGERS ? "disabled" : ""
+            }`}
             aria-label="성인 승객 감소"
             onClick={decrementCount}
           >
@@ -46,7 +48,9 @@ const FlightBooking = () => {
           </button>
           <span aria-live="polite">{adultCount}</span>
           <button
-            className="button-text"
+            className={`button-text ${
+              adultCount === MAX_PASSENGERS ? "disabled" : ""
+            }`}
             aria-label="성인 승객 증가"
             onClick={incrementCount}
           >

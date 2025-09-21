@@ -40,6 +40,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &.disabled {
+    cursor: not-allowed;
+    color: #818181ff;
+    background-color: #e1e1e1ff;
+  }
 }
 
 .counter span {
